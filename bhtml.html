@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beneficial Owner Form</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .d-none {
+        display: none;
+      }
+      .note {
+        color: red;
+      }
+      .btn-primary,
+      .btn-success {
+        background-color: #28a745; /* Change this to your desired color */
+        border-color: #28a745; /* Change this to match the background color */
+      }
+      .btn-primary:hover,
+      .btn-success:hover {
+        background-color: #218838; /* Change this to a slightly darker shade */
+        border-color: #1e7e34; /* Change this to match the background color */
+      }
+      .card-header {
+        background-color: transparent !important;
+      }
+      .btn-submit {
+        margin-left: 40%;
+        margin-bottom: 5%;
+        background: #4cffc5;
+        color: black;
+      }
+      .btn-color {
+        background: #4cffc5;
+        color: black;
+      }
+      .btn-color:hover {
+        background: #3be8a6;
+        color: black;
+      }
+      .btn-color-code {
+        background-color: darkgray;
+        border-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h3>Account Verification Pending</h3>
+      <p class="note">Please Provide Beneficial Ownership Details</p>
+      <div class="text-right mb-4">
+        <button class="btn btn-primary btn-color">Add Beneficial Owners</button>
+      </div>
+
+      <!-- Beneficial Owner-1 (UNVerified) -->
+      <div class="card mb-4">
+        <div
+          class="card-header d-flex justify-content-between align-items-center"
+        >
+          <h3 class="mb-0">
+            Beneficial Owner-1
+            <span class="badge badge-secondary">Unverified</span>
+          </h3>
+          <div>
+            <button class="btn btn-sm btn-warning btn-color-code">Edit</button>
+            <button class="btn btn-sm btn-danger btn-color-code">Delete</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName1">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName1"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName1">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName1"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dateOfBirth1">Date of Birth</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dateOfBirth1"
+                placeholder="Date of Birth"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address11">Address-1</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address11"
+                placeholder="Address-1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address12">Address-2</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address12"
+                placeholder="Address-2"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="city1">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city1"
+                  placeholder="City"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state1">State</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="state1"
+                  placeholder="State"
+                />
+              </div>
+              <div class="form-group col-md-2">
+                <label for="zipCode1">ZIP Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="zipCode1"
+                  placeholder="ZIP Code"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Residency Status</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residencyStatus1"
+                  id="resident1"
+                  value="Resident"
+                  checked
+                />
+                <label class="form-check-label ml-2" for="resident1">
+                  Resident
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residencyStatus1"
+                  id="nonResident1"
+                  value="Non-Resident"
+                />
+                <label class="form-check-label ml-2" for="nonResident1">
+                  Non-Resident
+                </label>
+              </div>
+            </div>
+            <div id="residentFields1">
+              <div class="form-group">
+                <label for="ssn1">Enter your SSN</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ssn1"
+                  placeholder="Enter 9 Digit SSN"
+                />
+              </div>
+            </div>
+            <div id="nonResidentFields1" class="d-none">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="passportNumber1"
+                    >Enter your Passport Number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="passportNumber1"
+                    placeholder="Passport Number"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="country1">Country</label>
+                  <select class="form-control" id="country1">
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- <button type="submit" class="btn btn-success btn-color">
+              Submit
+            </button> -->
+          </form>
+        </div>
+      </div>
+
+      <!-- Beneficial Owner-2 (Verified) -->
+      <div class="card mb-4">
+        <div
+          class="card-header d-flex justify-content-between align-items-center"
+        >
+          <h3 class="mb-0">
+            Beneficial Owner-2
+            <span class="badge badge-warning">Document Status</span>
+          </h3>
+          <div>
+            <button class="btn btn-sm btn-warning btn-color-code">Edit</button>
+            <button class="btn btn-sm btn-danger btn-color-code">Delete</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName2">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName2"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName2">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName2"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dateOfBirth2">Date of Birth</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dateOfBirth2"
+                placeholder="Date of Birth"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address21">Address-1</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address21"
+                placeholder="Address-1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address22">Address-2</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address22"
+                placeholder="Address-2"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="city2">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city2"
+                  placeholder="City"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state2">State</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="state2"
+                  placeholder="State"
+                />
+              </div>
+              <div class="form-group col-md-2">
+                <label for="zipCode2">ZIP Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="zipCode2"
+                  placeholder="ZIP Code"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Residency Status</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residencyStatus2"
+                  id="resident2"
+                  value="Resident"
+                  checked
+                />
+                <label class="form-check-label ml-2" for="resident2">
+                  Resident
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residencyStatus2"
+                  id="nonResident2"
+                  value="Non-Resident"
+                />
+                <label class="form-check-label ml-2" for="nonResident2">
+                  Non-Resident
+                </label>
+              </div>
+            </div>
+            <div id="residentFields2">
+              <div class="form-group">
+                <label for="ssn2">Enter your SSN</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ssn2"
+                  placeholder="Enter 9 Digit SSN"
+                />
+              </div>
+            </div>
+            <div id="nonResidentFields2" class="d-none">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="passportNumber2"
+                    >Enter your Passport Number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="passportNumber2"
+                    placeholder="Passport Number"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="country2">Country</label>
+                  <select class="form-control" id="country2">
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="documentType2">Document Type</label>
+              <select class="form-control" id="documentType2">
+                <option value="passport">Passport</option>
+                <option value="idCard">ID Card</option>
+                <option value="driverLicense">Driver License</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="documentUpload2">Upload Document</label>
+              <input type="file" class="form-control" id="documentUpload2" />
+            </div>
+            <!-- <button type="submit" class="btn btn-success btn-color">
+              Submit
+            </button> -->
+          </form>
+        </div>
+      </div>
+
+      <!-- Beneficial Owner-3 (Unverified) -->
+      <div class="card mb-4">
+        <div
+          class="card-header d-flex justify-content-between align-items-center"
+        >
+          <h3 class="mb-0">
+            Beneficial Owner-3
+            <span class="badge badge-success">Verified</span>
+          </h3>
+          <div>
+            <button class="btn btn-sm btn-warning btn-color-code">Edit</button>
+            <button class="btn btn-sm btn-danger btn-color-code">Delete</button>
+          </div>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstName3">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName3"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastName3">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName3"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="dateOfBirth3">Date of Birth</label>
+              <input
+                type="date"
+                class="form-control"
+                id="dateOfBirth3"
+                placeholder="Date of Birth"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address31">Address-1</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address31"
+                placeholder="Address-1"
+              />
+            </div>
+            <div class="form-group">
+              <label for="address32">Address-2</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address32"
+                placeholder="Address-2"
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="city3">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city3"
+                  placeholder="City"
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state3">State</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="state3"
+                  placeholder="State"
+                />
+              </div>
+              <div class="form-group col-md-2">
+                <label for="zipCode3">ZIP Code</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="zipCode3"
+                  placeholder="ZIP Code"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Residency Status</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residencyStatus3"
+                  id="resident3"
+                  value="Resident"
+                  checked
+                />
+                <label class="form-check-label ml-2" for="resident3">
+                  Resident
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="residencyStatus3"
+                  id="nonResident3"
+                  value="Non-Resident"
+                />
+                <label class="form-check-label ml-2" for="nonResident3">
+                  Non-Resident
+                </label>
+              </div>
+            </div>
+            <div id="residentFields3">
+              <div class="form-group">
+                <label for="ssn3">Enter your SSN</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ssn3"
+                  placeholder="Enter 9 Digit SSN"
+                />
+              </div>
+            </div>
+            <div id="nonResidentFields3" class="d-none">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="passportNumber3"
+                    >Enter your Passport Number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="passportNumber3"
+                    placeholder="Passport Number"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="country3">Country</label>
+                  <select class="form-control" id="country3">
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="documentType3">Document Type</label>
+              <select class="form-control" id="documentType3">
+                <option value="passport">Passport</option>
+                <option value="idCard">ID Card</option>
+                <option value="driverLicense">Driver License</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="documentUpload3">Upload Document</label>
+              <input type="file" class="form-control" id="documentUpload3" />
+            </div>
+            <!-- <button type="submit" class="btn btn-success btn-color">
+              Submit
+            </button> -->
+          </form>
+        </div>
+      </div>
+
+      <!-- Checkbox and Submit Button -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="confirmCheck" />
+        <label class="form-check-label" for="confirmCheck">
+          I hereby certify, to the best of my knowledge, that the information
+          provided above is correct.
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3 btn-submit">
+        Submit Beneficial Owner
+      </button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const residencyRadios1 = document.getElementsByName("residencyStatus1");
+        const residentFields1 = document.getElementById("residentFields1");
+        const nonResidentFields1 =
+          document.getElementById("nonResidentFields1");
+        const residencyRadios2 = document.getElementsByName("residencyStatus2");
+        const residentFields2 = document.getElementById("residentFields2");
+        const nonResidentFields2 =
+          document.getElementById("nonResidentFields2");
+        const residencyRadios3 = document.getElementsByName("residencyStatus3");
+        const residentFields3 = document.getElementById("residentFields3");
+        const nonResidentFields3 =
+          document.getElementById("nonResidentFields3");
+
+        residencyRadios1.forEach((radio) => {
+          radio.addEventListener("change", function () {
+            if (this.value === "Resident") {
+              residentFields1.classList.remove("d-none");
+              nonResidentFields1.classList.add("d-none");
+            } else {
+              residentFields1.classList.add("d-none");
+              nonResidentFields1.classList.remove("d-none");
+            }
+          });
+        });
+
+        residencyRadios2.forEach((radio) => {
+          radio.addEventListener("change", function () {
+            if (this.value === "Resident") {
+              residentFields2.classList.remove("d-none");
+              nonResidentFields2.classList.add("d-none");
+            } else {
+              residentFields2.classList.add("d-none");
+              nonResidentFields2.classList.remove("d-none");
+            }
+          });
+        });
+
+        residencyRadios3.forEach((radio) => {
+          radio.addEventListener("change", function () {
+            if (this.value === "Resident") {
+              residentFields3.classList.remove("d-none");
+              nonResidentFields3.classList.add("d-none");
+            } else {
+              residentFields3.classList.add("d-none");
+              nonResidentFields3.classList.remove("d-none");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
