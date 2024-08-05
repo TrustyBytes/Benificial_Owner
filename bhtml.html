@@ -37,12 +37,19 @@
     <div class="container mt-5">
       <h3>Account Verification Pending</h3>
       <p class="note">Please Provide Beneficial Ownership Details</p>
-      <div class="text-right mb-4">
+      <div class="container mt-5">
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-primary" onclick="toggleContainer('container1')">Button 1</button>
+          <button type="button" class="btn btn-secondary"onclick="toggleContainer('container2')">Button 2</button>
+          <button type="button" class="btn btn-success"onclick="toggleContainer('container3')">Button 3</button>
+        </div>
+      </div>
+      <div class="text-right mb-4 mt-3">
         <button class="btn btn-primary btn-color">Add Beneficial Owners</button>
       </div>
 
       <!-- Beneficial Owner-1 (UNVerified) -->
-      <div class="card mb-4">
+      <div id="container1" class="card mb-4 d-block" >
         <div
           class="card-header d-flex justify-content-between align-items-center"
         >
@@ -204,7 +211,7 @@
       </div>
 
       <!-- Beneficial Owner-2 (Verified) -->
-      <div class="card mb-4">
+      <div id="container2" class="card mb-4 d-none" >
         <div
           class="card-header d-flex justify-content-between align-items-center"
         >
@@ -379,7 +386,7 @@
       </div>
 
       <!-- Beneficial Owner-3 (Unverified) -->
-      <div class="card mb-4">
+      <div id="container3" class="card mb-4 d-none" >
         <div
           class="card-header d-flex justify-content-between align-items-center"
         >
@@ -617,6 +624,18 @@
           });
         });
       });
+      function toggleContainer(containerId) {
+    var container = document.getElementsByClassName("card mb-4");
+    for(var i = 0; i < container.length; i++) {
+      if (container[i].id === containerId) {
+        container[i].classList.remove("d-none");
+        container[i].classList.add("d-block");
+      }else{
+        container[i].classList.remove("d-block");
+        container[i].classList.add("d-none");
+      }
+    }
+  }
     </script>
   </body>
 </html>
